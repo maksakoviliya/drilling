@@ -160,77 +160,363 @@
       </section>
       <section class="section section_dark calculator">
         <div class="container">
-          <h2 class="section__title has-text-left">Рассчитайте стоимость бурения на вашем участке</h2>
-          <p class="section__text has-text-left">Укажите необходимые параметры для расчета.</p>
-          <div class="section__hr section__hr_left"></div>
-          <form action="#" class="form">
-            <div class="columns">
-              <div class="column">
-                <div class="field with-select">
-                  <label for="region" class="label">Выберите район</label>
-                  <div class="control">
-                    <select id="region" name="#" class="wide">
-                      <option data-display="Район">Район</option>
-                      <option value="1">Одинцово</option>
-                      <option value="2">Купчино</option>
-                      <option value="3" disabled="">Щапово</option>
-                      <option value="4">Попово</option>
-                      <option data-display="Район">Район</option>
-                      <option value="1">Одинцово</option>
-                      <option value="2">Купчино</option>
-                      <option value="3" disabled="">Щапово</option>
-                      <option value="4">Попово</option>
-                      <option data-display="Район">Район</option>
-                      <option value="1">Одинцово</option>
-                      <option value="2">Купчино</option>
-                      <option value="3" disabled="">Щапово</option>
-                      <option value="4">Попово</option>
-                    </select>
+          <div class="calculator__header">
+            <h2 class="section__title has-text-left">Рассчитайте стоимость бурения на вашем участке</h2>
+            <p class="section__text has-text-left">Укажите необходимые параметры для расчета.</p>
+            <div class="section__hr section__hr_left"></div>
+          </div>
+          <div class="columns is-multiline">
+            <div class="column is-12 is-6-desktop">
+              <form action="#" class="form">
+                <div class="columns">
+                  <div class="column">
+                    <div class="field with-select">
+                      <label for="region" class="label">Выберите район</label>
+                      <div class="control">
+                        <select id="region" name="#" class="wide">
+                          <option data-display="Район">Район</option>
+                          <option value="1">Одинцово</option>
+                          <option value="2">Купчино</option>
+                          <option value="3" disabled="">Щапово</option>
+                          <option value="4">Попово</option>
+                          <option data-display="Район">Район</option>
+                          <option value="1">Одинцово</option>
+                          <option value="2">Купчино</option>
+                          <option value="3" disabled="">Щапово</option>
+                          <option value="4">Попово</option>
+                          <option data-display="Район">Район</option>
+                          <option value="1">Одинцово</option>
+                          <option value="2">Купчино</option>
+                          <option value="3" disabled="">Щапово</option>
+                          <option value="4">Попово</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field with-select">
+                      <label for="region" class="label">Тип скважины</label>
+                      <div class="control">
+                        <select id="region" name="#" class="wide">
+                          <option data-display="Тип">Название типа</option>
+                          <option value="1">Одинцово</option>
+                          <option value="2">Купчино</option>
+                          <option value="3" disabled="">Щапово</option>
+                          <option value="4">Попово</option>
+                          <option data-display="Район">Район</option>
+                          <option value="1">Одинцово</option>
+                          <option value="2">Купчино</option>
+                          <option value="3" disabled="">Щапово</option>
+                          <option value="4">Попово</option>
+                          <option data-display="Район">Район</option>
+                          <option value="1">Одинцово</option>
+                          <option value="2">Купчино</option>
+                          <option value="3" disabled="">Щапово</option>
+                          <option value="4">Попово</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="column">
-                <div class="field with-select">
-                  <label for="region" class="label">Тип скважины</label>
-                  <div class="control">
-                    <select id="region" name="#" class="wide">
-                      <option data-display="Тип">Название типа</option>
-                      <option value="1">Одинцово</option>
-                      <option value="2">Купчино</option>
-                      <option value="3" disabled="">Щапово</option>
-                      <option value="4">Попово</option>
-                      <option data-display="Район">Район</option>
-                      <option value="1">Одинцово</option>
-                      <option value="2">Купчино</option>
-                      <option value="3" disabled="">Щапово</option>
-                      <option value="4">Попово</option>
-                      <option data-display="Район">Район</option>
-                      <option value="1">Одинцово</option>
-                      <option value="2">Купчино</option>
-                      <option value="3" disabled="">Щапово</option>
-                      <option value="4">Попово</option>
-                    </select>
+                <div class="form__hr"></div>
+                <div class="columns">
+                  <div class="column">
+                    <div class="field with-range">
+                      <label for="region" class="label">Глубина бурения (метры)</label>
+                      <div class="control"><a href="#" class="range-minus range-control"><img src="./img/minus.svg" alt=""/></a>
+                        <div class="range">
+                          <input type="text" data-from="50" class="range-slider"/>
+                        </div><a href="#" class="range-plus range-control"><img src="./img/plus.svg" alt=""/></a>
+                      </div>
+                    </div>
                   </div>
+                </div>
+                <div class="form__hr"></div>
+                <div class="columns is-multiline radio-buttons">
+                  <div class="column is-12">
+                    <div class="field">
+                      <label for="" class="label">Варианты обсадки:</label>
+                    </div>
+                  </div>
+                  <div class="column is-12-mobile is-6-tablet">
+                    <div class="field">
+                      <div class="control">
+                        <label class="radio"><span>Ø 133 стальная труба</span><span>Производительность: <b>до 3 м³/час</b></span>
+                          <div class="indicator"></div>
+                          <input type="radio" name="gender"/>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column is-12-mobile is-6-tablet">
+                    <div class="field">
+                      <div class="control">
+                        <label class="radio"><span>Ø 133 стальная труба + Ø 117 ПНД</span><span>Производительность: <b>до 3 м³/час</b></span>
+                          <div class="indicator"></div>
+                          <input type="radio" name="gender"/>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column is-12-mobile is-6-tablet">
+                    <div class="field">
+                      <div class="control">
+                        <label class="radio"><span>Ø 159 стальная труба</span><span>Производительность: <b>до 6 м³/час</b></span>
+                          <div class="indicator"></div>
+                          <input type="radio" name="gender"/>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column is-12-mobile is-6-tablet">
+                    <div class="field">
+                      <div class="control">
+                        <label class="radio"><span>Ø 159 стальная труба + Ø 125 ПНД</span><span>Производительность: <b>до 6 м³/час</b></span>
+                          <div class="indicator"></div>
+                          <input type="radio" name="gender"/>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="column is-12 is-6-desktop">
+              <div class="smeta">
+                <div class="smeta__header">
+                  <h3 class="h3 smeta__title">Ваша смета</h3>
+                </div>
+                <div class="form__hr form__hr_marginless"></div>
+                <div class="smeta__block">
+                  <div class="smeta__row">
+                    <p class="smeta__label">Район</p>
+                    <p class="smeta__value">Одинцово</p>
+                  </div>
+                  <div class="smeta__row">
+                    <p class="smeta__label">Тип скважин</p>
+                    <p class="smeta__value">Название типа</p>
+                  </div>
+                  <div class="smeta__row">
+                    <p class="smeta__label">Вариант обсадки</p>
+                    <p class="smeta__value">
+                       
+                      Ø 133 <br class="is-hidden-tablet"/>стальная труба
+                    </p>
+                  </div>
+                  <div class="smeta__row">
+                    <p class="smeta__label">Производительность</p>
+                    <p class="smeta__value">до 3 м³/час</p>
+                  </div>
+                </div>
+                <div class="form__hr form__hr_marginless"></div>
+                <div class="smeta__block">
+                  <h4 class="h4 smeta__block-title">Дополнительная информация:</h4>
+                  <div class="smeta__row">
+                    <p class="smeta__label">Гарантия на скважину</p>
+                    <p class="smeta__value">4 года</p>
+                  </div>
+                  <div class="smeta__row">
+                    <p class="smeta__label">Анализ воды после бурения</p>
+                    <p class="smeta__value">бесплатно</p>
+                  </div>
+                  <div class="smeta__row">
+                    <p class="smeta__label">Паспорт на скважину</p>
+                    <p class="smeta__value">бесплатно</p>
+                  </div>
+                </div>
+                <div class="form__hr form__hr_marginless"></div>
+                <div class="smeta__block">
+                  <div class="smeta__row">
+                    <p class="smeta__label">Итого:</p>
+                    <p class="smeta__price">120 000 руб.</p>
+                  </div>
+                </div>
+                <div class="smeta__footer">
+                  <h4 class="h4 smeta__block-title">Контактные данные:</h4>
+                  <form action="#" class="form">
+                    <div class="field">
+                      <div class="control">
+                        <input type="text" placeholder="Введите ваше имя*" class="input"/>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="control">
+                        <input type="text" placeholder="Номер телефона*" class="input"/>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="control">
+                        <input type="submit" value="Отправить заявку менеджеру" class="button button_wrapped is-fullwidth"/>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="control">
+                        <label class="checkbox">Нажимая кнопку «Отправить заявку менеджеру» я принимаю <a href="#">соглашение о персональных данных</a>
+                          <input type="checkbox" checked="checked"/>
+                          <div class="control__indicator"></div>
+                        </label>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
-            <div class="form__hr"></div>
-            <div class="columns">
-              <div class="column">
-                <div class="field with-range">
-                  <label for="region" class="label">Глубина бурения (метры)</label>
-                  <div class="control"><a href="#" class="range-minus range-control"><img src="./img/minus.svg" alt=""/></a>
-                    <div class="range">
-                      <input type="text" data-from="50" class="range-slider"/>
-                    </div><a href="#" class="range-plus range-control"><img src="./img/plus.svg" alt=""/></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form__hr"></div>
-          </form>
+          </div>
         </div>
-      </section><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+      </section>
+      <section class="section map">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-12 is-7-desktop is-10-widescreen">
+              <h2 class="section__title">
+                 
+                Глубина залегания подземных вод в <br class="is-hidden-touch is-hidden-desktop-only"/>Московской области
+              </h2>
+              <p class="section__text">До начала бурения мы изучаем карту залегания подземных вод в Московской области, рассматриваем существующие данные по бурению и гидрогеологическим характеристикам.</p>
+              <p class="section__text">Каждый район Подмосковья имеет свои особенности геологических характеристик, именно поэтому стоит подойти к процессу бурения с научной точностью</p>
+              <div class="section__hr section__hr_margin-bottom-50"></div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <div id="map"><span>map</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section features">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-12 is-7-desktop is-10-widescreen">
+              <h2 class="section__title">
+                 
+                У нас бесплатно то, что у других может  <br class="is-hidden-touch is-hidden-desktop-only"/>оказаться дорогим удовольствием
+              </h2>
+              <div class="section__hr"></div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <div class="features__list">
+                <div class="feature">
+                  <div class="feature__img"><img src="./img/feature_1.svg" alt=""/></div>
+                  <p class="feature__text">Консультация<br/>заказчика</p>
+                </div>
+                <div class="feature">
+                  <div class="feature__img"><img src="./img/feature_2.svg" alt=""/></div>
+                  <p class="feature__text">Геофизические работы по определению глубины залегания подземных вод</p>
+                </div>
+                <div class="feature">
+                  <div class="feature__img"><img src="./img/feature_3.svg" alt=""/></div>
+                  <p class="feature__text">Включен анализ воды стоимостью 27 100 руб. <br class="is-hidden-desktop"/>по всему комплексу показателей СанПин 2.1.4.1074-01 </p>
+                </div>
+                <div class="feature">
+                  <div class="feature__img"><img src="./img/feature_4.svg" alt=""/></div>
+                  <p class="feature__text">Передача паспорта на скважину и протокола по анализу воды</p>
+                </div>
+                <div class="feature">
+                  <div class="feature__img"><img src="./img/feature_5.svg" alt=""/></div>
+                  <p class="feature__text">Уборка участка <br/>после бурение, <br/>подписание акта сдачи <br/>приемки скважины в эксплуатацию</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section style="background-image: url(./img/banner.png)" class="section section_with-bg request">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-12-mobile is-11-widescreen is-offset-1-widescreen">
+              <h2 class="section__title request__title has-text-white has-text-left">Рассчитайте стоимость бурения на вашем участке</h2>
+              <p class="request__text has-text-white has-text-left">
+                 
+                Обеспечьте свой дом артезианской водой. Для консультации нашего гидрогеолога – просто оставьте ваш номер телефона. <br class="is-hidden-mobile"/>Остальное <br class="is-hidden-tablet"/>сделаем мы!
+              </p>
+              <form action="#" class="form request__form">
+                <div class="field">
+                  <div class="control">
+                    <input type="text" placeholder="Номер телефона *" class="input"/>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <input type="submit" value="Оставить заявку" class="button is-fullwidth"/>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="control">
+                    <label class="checkbox">Нажимая кнопку «Отправить заявку менеджеру» я принимаю <a href="#">соглашение о персональных данных</a>
+                      <input type="checkbox" checked="checked"/>
+                      <div class="control__indicator"></div>
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="services">
+        <div class="services__list"><a href="#" class="service">
+            <div class="service__img"><img src="./img/tube_small.svg" alt=""/></div><span class="service__text">Заказать обустройство <br/>скважини</span></a><a href="#" class="service">
+            <div class="service__img"><img src="./img/clear.svg" alt=""/></div><span class="service__text">Заказать чистку <br/>скважини</span></a><a href="#" class="service">
+            <div class="service__img"><img src="./img/geology.svg" alt=""/></div><span class="service__text">Заказать геофизическое <br/>исследование</span></a></div>
+      </div>
     </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-multiline">
+          <div class="column is-12-mobile is-6-tablet is-3-desktop">
+            <h3 class="h3 footer__title">О компании</h3>
+            <div class="footer__menu">
+              <ul>
+                <li><a href="#">Оснащенность лаборатории</a></li>
+                <li><a href="#">Услуги подрядчикам</a></li>
+                <li><a href="#">Пригласить на тендер</a></li>
+              </ul>
+            </div>
+            <p class="footer__text"><span>ООО «Эколоджис» </span><span>ИНН: 7728323546</span><span>ОГРН: 5157746116369</span></p>
+          </div>
+          <div class="column is-12-mobile is-6-tablet is-3-desktop">
+            <h3 class="h3 footer__title">Связаться с нами</h3><a href="tel:+7999999999" class="footer__phone">+7 (499) 490-44-67</a>
+            <p class="footer__text footer__text_margin-bottom-30">с 9:00 до 20:00, ежедневно</p>
+            <p class="footer__text footer__text_margin-bottom-10">E-mail (круглосуточно):</p><a href="mailto:info@vodalab.ru" class="footer__mail">info@vodalab.ru</a><a href="#" class="button button_white mb40 is-small">Заказать анализ</a>
+          </div>
+          <div class="column is-12-mobile is-6-tablet is-3-desktop">
+            <h3 class="h3 footer__title">Источники для анализа</h3>
+            <div class="footer__menu">
+              <ul>
+                <li><a href="#">Подземные скважины</a></li>
+                <li><a href="#">Водопровод</a></li>
+                <li><a href="#">Колодец</a></li>
+                <li><a href="#">Сточные воды</a></li>
+                <li><a href="#">Родниковые воды</a></li>
+                <li><a href="#">Бутилированная вода</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="column is-12-mobile is-6-tablet is-3-desktop">
+            <h3 class="h3 footer__title">Источники для анализа</h3>
+            <div class="footer__menu">
+              <ul>
+                <li><a href="#">Кремний в воде</a></li>
+                <li><a href="#">Щелочность воды</a></li>
+                <li><a href="#">Органические загрязнители воды</a></li>
+                <li><a href="#">Фториды в воде</a></li>
+                <li><a href="#">Жесткость воды</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="columns is-multiline">
+            <div class="column is-12-touch is-6-desktop">
+              <p class="copyright">© 2018 Vodalab. Независимый Испытательный Центр. Все права защищиены.</p>
+            </div>
+            <div class="column is-12-touch is-6-desktop"><a href="#" class="footer__link">Соглашение о персональных данных</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
