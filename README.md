@@ -6,3 +6,4 @@ Landing page of drilling organisation
 [Новый хедер](https://maksakoviliya.github.io/drilling/dist/index_new-header.html)  
 [Водолаб Новые блоки](https://maksakoviliya.github.io/drilling/dist/vodolab-checkboxes.html)     
 [Водолаб Новый хедер](https://maksakoviliya.github.io/drilling/dist/vodolab-header.html)     
+[Водолаб схемы](https://maksakoviliya.github.io/drilling/dist/schemas.html)     
