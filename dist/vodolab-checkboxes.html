@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Водолаб</title>
+    <link rel="stylesheet" href="https://vodalab.ru/wp-content/themes/vodalab_new/style.css?ver=1.0.2"/>
+    <link rel="stylesheet" href="./css/vodolab.css"/>
+  </head>
+  <body>
+    <div class="equipment">
+      <div class="equipment__title">Варианты оборудования:</div>
+      <div class="equipments">
+        <div class="radios">
+          <label class="radio checked"><span class="radio__title">Runxin</span><span>Производство: Китай </span><span>Управление: автоматика</span>
+            <input type="radio" name="gender"/>
+          </label>
+          <label class="radio"><span class="radio__title">Runxin</span><span>Производство: Китай </span><span>Управление: автоматика</span>
+            <input type="radio" name="gender"/>
+          </label>
+          <label class="radio"><span class="radio__title">Runxin</span><span>Производство: Китай </span><span>Управление: автоматика</span>
+            <input type="radio" name="gender"/>
+          </label>
+        </div>
+      </div>
+      <hr/>
+      <p>
+         
+        Добавить JS<br/>$('input[type=radio]').on('change', function() {<br/>   $(this).closest('.radio-buttons').find('.radio').removeClass('checked');<br/>   $(this).closest('.radio').addClass('checked');<br/> })
+      </p>
+    </div>
+  </body>
+</html>
