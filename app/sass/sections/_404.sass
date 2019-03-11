@@ -1,0 +1,33 @@
+.s404__title
+	font-weight: bold
+	font-size: 80px
+	+tablet
+		font-size: 140px
+.s404__text
+	// font-family: $title-family
+	margin-bottom: 50px
+	font-size: 28px
+	+tablet
+		font-size: 48px
+.s404__links
+	display: flex
+	justify-content: center
+	a
+		display: block
+		position: relative
+		color: $text
+		font-size: 14px
+		+tablet
+			font-size: 18px
+		&:hover
+			text-decoration: underline
+		&:first-child
+			margin-right: 30px
+			&:after
+				content: '/'
+				position: absolute
+				font-size: 28px
+				top: 50%
+				transform: translateY(-50%)
+				left: auto
+				right: -18px

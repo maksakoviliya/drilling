@@ -1,0 +1,46 @@
+.schemas
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 100px 0
+	background-color: rgba($color-main, 0.5)
+
+.schema
+	width: 100%
+	max-width: 290px
+	margin: 0 auto
+	background-color: #fff
+	padding: 10px
+	text-align: center
+	+tablet
+		padding: 20px 20px 30px
+		max-width: 678px
+	+widescreen
+		max-width: 1170px
+	.schema__close
+		width: 32px
+		height: 32px
+		margin-left: auto
+		margin-right: 0
+		display: block
+		+transition
+		svg
+			fill: #7A8491
+		&:hover
+			svg
+				fill: $color-main
+	.schema__title
+		font-family: $title-family
+		font-size: 24px
+		font-weight: 600
+		margin-bottom: 20px
+		+tablet
+			font-size: 32px
+	.schema__address
+		font-weight: 600
+		margin-bottom: 10px
+		letter-spacing: -0.2px
+		+tablet
+			margin-bottom: 5px
+	.schema__text
+		margin-bottom: 30px

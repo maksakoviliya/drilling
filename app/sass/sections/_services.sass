@@ -1,0 +1,28 @@
+.services
+	background-color: #1d3e89
+
+.services__list
+	+desktop
+		display: flex
+		justify-content: center
+
+.service
+	display: block
+	text-align: center
+	color: #fff
+	padding: 50px 0
+	width: 100%
+	+transition
+	&:hover
+		color: #fff
+		background-color: $text-hover
+	&:nth-child(2)
+		background-color: #274a99
+		&:hover
+			background-color: $text-hover
+	+desktop
+		max-width: 370px
+		padding: 100px 0
+
+.service__img
+	margin-bottom: 20px

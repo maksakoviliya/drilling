@@ -1,0 +1,61 @@
+.tabs
+	+mobile
+		margin-bottom: 0
+		ul
+			width: 100%
+			display: flex
+			flex-wrap: wrap
+			border: none
+			justify-content: space-between
+			border-bottom: 1px solid #979797
+			padding-bottom: 12px
+			li
+				width: calc(50% - 10px)
+				border: none
+				&.is-active
+					a
+						background-color: #beaf87
+						color: $text-color
+						border-color: #beaf87
+						pointer-events: none
+						&:hover
+							color: $text-color
+				a
+					display: block
+					width: 100%
+					border: 1px solid #726a55
+					font-size: 12px
+					text-align: center
+					margin-bottom: 12px
+					&:hover
+						border-color: $color-main
+						color: $text-color
+
+.tabs-content
+	.tab-item__content
+		display: none
+		&.is-active
+			display: block
+		.column
+			> .input-styled,
+			> .select,
+			> .button,
+			> .fstElement,
+				&:last-child
+					margin-bottom: -10px
+					+desktop
+						// margin-bottom: 0
+			> .control
+				&:last-child
+					margin-bottom: -30px
+				&.small-margin
+					&:last-child
+						margin-bottom: -18px
+						+tablet
+							margin-bottom: -30px
+			> .input-group
+				&:last-child
+					margin-bottom: -20px
+			> .checkboxes
+				&:last-child
+					margin-bottom: -15px

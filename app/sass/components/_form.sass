@@ -1,0 +1,37 @@
+.form
+	.column
+		> .input-styled,
+		> .select,
+		> .button,
+		> .fstElement,
+			&:last-child
+				margin-bottom: -10px
+				+desktop
+					// margin-bottom: 0
+		> .control
+			&:last-child
+				margin-bottom: -30px
+			&.small-margin
+				&:last-child
+					margin-bottom: -18px
+					+tablet
+						margin-bottom: -30px
+		> .input-group
+			&:last-child
+				margin-bottom: -20px
+		> .checkboxes
+			&:last-child
+				margin-bottom: -15px
+.form__footer
+	margin-top: 30px
+	.button
+		margin-left: auto
+
+.form__footer-button
+	margin-left: auto
+	+mobile
+		margin-top: 30px
+	+tablet-only
+		margin-top: 15px
+	+desktop
+		margin-top: 25px

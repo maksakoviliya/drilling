@@ -1,0 +1,19 @@
+section.section.section_with-bg.request(style='background-image: url(./img/banner_2.png)')
+	.container
+		.columns
+			.column.is-12-mobile.is-11-widescreen.is-offset-1-widescreen
+				h2.section__title.request__title.has-text-white.has-text-left Рассчитайте стоимость бурения на вашем участке
+				p.request__text.has-text-white.has-text-left 
+					| Обеспечьте свой дом артезианской водой. Для консультации нашего гидрогеолога – просто оставьте ваш номер телефона. 
+					br.is-hidden-mobile
+					| Остальное 
+					br.is-hidden-tablet
+					| сделаем мы!
+				form(action="#").form.request__form
+					.field
+						.control
+							input(type="text", placeholder='Номер телефона *').input
+					.field
+						.control
+							input(type="submit", value='Оставить заявку').button.is-fullwidth
+					

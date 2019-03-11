@@ -1,0 +1,27 @@
+.button
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+	font-weight: 600
+	line-height: normal
+	letter-spacing: 0.3px
+	height: auto
+	+transition
+	+tablet
+		font-size: 18px
+	&:focus,
+	&:active
+		border-color: transparent
+		color: #fff
+	&:hover
+		background-color: darken($color-main, 10%)
+	&.button_wrapped
+		white-space: normal
+		line-height: 1.4
+	&.button_white
+		background-color: #fff
+		color: #003bdd
+		&:hover
+			background-color: #ccc
+	&.button_small
+		font-size: 11px
+		letter-spacing: 0.2px
+		padding: 6px 10px 5px

@@ -1,0 +1,164 @@
+section.section.section_dark.calculator
+	.container
+		.calculator__header
+			h2.section__title.has-text-left Рассчитайте стоимость бурения на вашем участке
+			p.section__text.has-text-left Укажите необходимые параметры для расчета.
+			.section__hr.section__hr_left
+		.columns.is-multiline
+			.column.is-12.is-6-desktop
+				form.form(action="#")
+					.columns
+						.column
+							.field.with-select
+								label(for="region").label Выберите район
+								.control
+									select#region(name="#").wide
+										option(data-display='Район') Район
+										option(value='1') Одинцово
+										option(value='2') Купчино
+										option(value='3', disabled='') Щапово
+										option(value='4') Попово
+										option(data-display='Район') Район
+										option(value='1') Одинцово
+										option(value='2') Купчино
+										option(value='3', disabled='') Щапово
+										option(value='4') Попово
+										option(data-display='Район') Район
+										option(value='1') Одинцово
+										option(value='2') Купчино
+										option(value='3', disabled='') Щапово
+										option(value='4') Попово
+						.column
+							.field.with-select
+								label(for="region").label Тип скважины
+								.control
+									select#region(name="#").wide
+										option(data-display='Тип') Название типа
+										option(value='1') Одинцово
+										option(value='2') Купчино
+										option(value='3', disabled='') Щапово
+										option(value='4') Попово
+										option(data-display='Район') Район
+										option(value='1') Одинцово
+										option(value='2') Купчино
+										option(value='3', disabled='') Щапово
+										option(value='4') Попово
+										option(data-display='Район') Район
+										option(value='1') Одинцово
+										option(value='2') Купчино
+										option(value='3', disabled='') Щапово
+										option(value='4') Попово
+					.form__hr
+					.columns
+						.column
+							.field.with-range
+								label(for="region").label Глубина бурения (метры)
+								.control
+									a(href="#").range-minus.range-control
+										img(src="./img/minus.svg", alt="")
+									.range
+										input(type="text",data-from='50').range-slider
+									a(href="#").range-plus.range-control
+										img(src="./img/plus.svg", alt="")
+					.form__hr
+					.columns.is-multiline.radio-buttons
+						.column.is-12
+							.field
+								label(for="").label Варианты обсадки:
+						.column.is-12-mobile.is-6-tablet
+							.field
+								.control
+									label.radio
+										span Ø 133 стальная труба
+										span Стоимость: 1600р / м.п. 
+										span Производительность: 
+											b до 3 м³/час
+										.indicator
+										input(type='radio', name='gender')
+						.column.is-12-mobile.is-6-tablet
+							.field
+								.control
+									label.radio
+										span Ø 133 стальная труба + Ø 117 ПНД
+										span Стоимость: 1800р / м.п.
+										span Производительность: 
+											b до 3 м³/час
+										.indicator
+										input(type='radio', name='gender')
+						.column.is-12-mobile.is-6-tablet
+							.field
+								.control
+									label.radio
+										span Ø 159 стальная труба
+										span Стоимость: 2200р / м.п.
+										span Производительность: 
+											b до 6 м³/час
+										.indicator
+										input(type='radio', name='gender')
+						.column.is-12-mobile.is-6-tablet
+							.field
+								.control
+									label.radio
+										span Ø 159 стальная труба + Ø 125 ПНД
+										span Стоимость: 5800р / м.п.
+										span Производительность: 
+											b до 6 м³/час
+										.indicator
+										input(type='radio', name='gender')
+			.column.is-12.is-6-desktop
+				.smeta
+					.smeta__header
+						h3.h3.smeta__title Ваша смета
+					.form__hr.form__hr_marginless
+					.smeta__block
+						.smeta__row
+							p.smeta__label Район
+							p.smeta__value Одинцово
+						.smeta__row
+							p.smeta__label Тип скважин
+							p.smeta__value Название типа
+						.smeta__row
+							p.smeta__label Вариант обсадки
+							p.smeta__value 
+								| Ø 133 
+								br.is-hidden-tablet
+								| стальная труба
+						.smeta__row
+							p.smeta__label Производительность
+							p.smeta__value до 3 м³/час
+					.form__hr.form__hr_marginless
+					.smeta__block
+						h4.h4.smeta__block-title Дополнительная информация:
+						.smeta__row
+							p.smeta__label Гарантия на скважину
+							p.smeta__value 4 года
+						.smeta__row
+							p.smeta__label Анализ воды после бурения
+							p.smeta__value бесплатно
+						.smeta__row
+							p.smeta__label Паспорт на скважину
+							p.smeta__value бесплатно
+					.form__hr.form__hr_marginless
+					.smeta__block
+						.smeta__row
+							p.smeta__label Итого:
+							p.smeta__price 120 000 руб.
+					.smeta__footer
+						h4.h4.smeta__block-title Контактные данные:
+						form(action="#").form
+							.field
+								.control
+									input(type="text", placeholder='Введите ваше имя*').input
+							.field
+								.control
+									input(type="text", placeholder='Номер телефона*').input
+							.field
+								.control
+									input(type="submit", value='Отправить заявку менеджеру').button.button_wrapped.is-fullwidth
+							.field
+								.control
+									label.checkbox
+										| Нажимая кнопку «Отправить заявку менеджеру» я принимаю 
+										a(href="#") соглашение о персональных данных
+										input(type='checkbox', checked)
+										.control__indicator

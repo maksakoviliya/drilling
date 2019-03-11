@@ -1,0 +1,49 @@
+.features
+
+.features__list
+	// margin-top: 20px
+	+tablet
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+	+desktop
+		flex-wrap: nowrap
+		padding: 20px 100px 0
+
+.feature
+	text-align: center
+	width: 100%
+	max-width: 206px
+	margin: 0 auto 20px
+	position: relative
+	+tablet
+		width: 33.33%
+		margin: 0 30px 55px 0
+		&:after
+			content: url('../img/arrow-right.svg')
+			position: absolute
+			left: auto
+			right: -30px
+			top: 37px
+		&:last-child,
+		&:nth-child(3)
+			margin-right: 0
+			&:after
+				display: none
+		&:last-child,
+		&:nth-last-child(2)
+			margin-bottom: 0
+	+desktop
+		margin-bottom: 0
+		&:nth-child(3)
+			margin-right: 30px
+			&:after
+				display: block
+.feature__img
+	width: 100px
+	height: 100px
+	margin: 0 auto 20px
+
+.feature__text
+	letter-spacing: -0.6px
+	line-height: 1.4

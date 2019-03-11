@@ -1,0 +1,547 @@
+.filter
+	background-color: #eee
+	margin: 48px 0 28px
+	padding: 20px 15px 20px
+	+tablet
+		background-color: transparent
+		border-bottom: 1px solid #424243
+		padding: 20px 0 10px
+	.filter__header
+		display: flex
+		align-items: center
+		justify-content: space-between
+	.filter__toggle
+		display: flex
+		align-items: center
+		color: $color-main
+		justify-content: center
+		width: 26px
+		height: 26px
+		+tablet
+			width: auto
+		.icon
+			width: 22px
+			height: 15px
+			+transition
+			svg
+				max-width: 100%
+				height: auto
+				fill: $color-main
+				+tablet
+					transform: scale(0.7)
+		.text
+			display: none
+			+tablet
+				display: inline-block
+				margin: 0 7px
+				font-size: 12px
+		&:hover
+			color: #726a54
+			.icon
+				svg
+					fill: #726a54
+		&.is-active
+			.icon
+				transform: rotate(180deg)
+	.filter__content
+		display: none
+		margin: 20px 0 15px
+		+tablet
+			margin: 20px 0 55px
+		.column
+			> .input-styled,
+			> .select,
+			> .button,
+			> .fstElement
+				&:last-child
+					margin-bottom: -10px
+					+desktop
+						// margin-bottom: 0
+			> .control,
+			> .input-group
+				&:last-child
+					margin-bottom: -20px
+			> .checkboxes
+				&:last-child
+					margin-bottom: -15px
+	.checkboxes
+		+desktop
+			margin-top: 8px
+
+.select
+	cursor: pointer
+	display: block
+	position: relative
+	width: 100%
+	height: 32px !important
+	margin-bottom: 12px
+	+desktop
+		height: 40px !important
+	&:after
+		display: none !important
+	.select-hidden
+		display: none !important
+		visibility: hidden
+		padding-right: 10px
+	.select-styled
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		padding-left: 10px
+		background-color: #ffffff
+		font-size: 10px
+		font-weight: 400
+		line-height: 32px
+		transition: .15s
+		border: 1px solid #aeaeae
+		+desktop
+			line-height: 40px
+			padding-left: 15px
+			font-size: 13px
+		&:after
+			content: ""
+			width: 32px
+			height: 32px
+			position: absolute
+			top: 0
+			right: 2px
+			background-image: url(../img/down_arrow.png)
+			background-position: center center
+			background-repeat: no-repeat
+			transition: .15s
+			+desktop
+				width: 40px
+				height: 40px
+			// +widescreen
+			// 	right: 17px
+		// &:active, &.active
+		&:active:after, &.active:after
+			transform: rotate(180deg)
+	.select-options
+		position: absolute
+		top: 100%
+		right: -1px
+		width: calc(100% + 2px)
+		left: -1px
+		margin: 0
+		padding: 0
+		list-style: none
+		font-size: 10px
+		line-height: 32px
+		background-color: #fff
+		border: 1px solid #d0d0d0
+		opacity: 0
+		visibility: hidden
+		transition: .15s
+		transform: translateY(0)
+		color: #191919
+		z-index: 15
+		+desktop
+			line-height: 40px
+			font-size: 13px
+			left: 0
+			right: 0
+		&.active
+			opacity: 1
+			visibility: visible
+			transform: translateY(6px)
+		li
+			margin: 0
+			padding: 0px 15px
+			border-bottom: 1px solid #dde3ef
+			transition: .15s
+			&:last-child
+				border-bottom: 0
+			&:hover
+				color: $light-brown
+			&[rel="hide"]
+				display: none
+
+// select
+// 	display: block
+// 	position: relative
+// 	width: 100%
+// 	height: 45px
+// 	margin-bottom: 13px
+// 	border: 0
+// 	outline: none
+// 	padding: 0 15px
+// 	font-family: 'Raleway-century21', sans-serif
+// 	font-size: 14px
+// 	font-weight: 400
+// 	padding-left: 15px
+// 	line-height: 45px
+// 	background-color: #fff
+// 	+desktop
+// 		min-width: 199px
+// 		width: auto
+// 		height: 55px
+// 		line-height: 55px
+// 		margin-bottom: 0
+// 	+widescreen
+// 		min-width: 230px
+// 		font-size: 16px
+// 		padding-left: 40px
+.textarea
+	position: relative
+	margin-bottom: 13px
+	font-size: 10px
+	font-weight: 400
+	background-color: #fff
+	width: 100%
+	border: 1px solid #d0d0d0
+	resize: none
+	height: 140px
+	padding: 0 10px
+	line-height: 32px
+	&:focus,
+	&:active
+		outline: none
+	+desktop
+		font-size: 13px
+		padding: 0 15px
+
+.input-group
+	display: flex
+	.input-styled
+		&:first-child
+			input
+				border-right-color: transparent
+
+.input-styled
+	display: block
+	position: relative
+	width: 100%
+	height: 32px !important
+	margin-bottom: 12px
+	+desktop
+		height: 40px !important
+	input
+		width: 100%
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		padding: 0 10px
+		background-color: #ffffff
+		font-size: 10px
+		font-weight: 400
+		line-height: 32px
+		transition: .15s
+		border: 1px solid #aeaeae
+		border-radius: 0
+		box-shadow: none
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		&:focus
+			outline: none
+		+desktop
+			padding: 0 15px
+			font-size: 13px
+	&.input-styled_with-icon_left
+		input
+			padding-left: 32px
+		.icon-left
+			position: absolute
+			left: 7px
+			top: 7px
+			z-index: 2
+			+desktop
+				top: 12px
+	&.input-styled_with-icon_right
+		input
+			padding-right: 32px
+		.icon-right
+			position: absolute
+			right: 7px
+			top: 7px
+			z-index: 2
+			+desktop
+				top: 12px
+.fstElement
+	width: 100%
+	border: 1px solid #aeaeae
+	font-size: 10px
+	font-family: $body-family
+	margin-bottom: 12px
+	&.fstActive
+		box-shadow: none
+		.fstControls
+			&:after
+				transform: rotate(180deg)
+		.fstResults
+			transform: translateY(6px)
+			box-shadow: none
+			border: 1px solid #d0d0d0
+			visibility: visible
+			opacity: 1
+	.fstControls
+		width: 100%
+		box-shadow: none
+		padding: 0 32px 0 0
+		display: flex
+		flex-wrap: wrap
+		position: relative
+		&:after
+			content: ""
+			width: 32px
+			height: 32px
+			position: absolute
+			top: 0
+			right: 2px
+			background-image: url(../img/down_arrow.png)
+			background-position: center center
+			background-repeat: no-repeat
+			transition: .15s
+			+desktop
+				width: 40px
+				height: 40px
+	.fstQueryInput
+		font-size: 10px
+		height: 32px
+		padding: 0
+		line-height: 32px
+		margin-bottom: 0
+		margin-left: 10px
+		cursor: pointer
+		+placeholder
+			color: $body-color
+		+desktop
+			margin-left: 15px
+			height: 40px
+			line-height: 40px
+			font-size: 13px
+	.fstChoiceItem
+		margin: 2px 0 2px 2px
+		border-radius: 0
+		background-color: $color-main
+		border: 0
+		padding-right: 7px
+		animation: opacityEnter .2s
+		+desktop
+			font-size: 13px
+			line-height: 28px
+			padding: 4px 12px 4px 19px
+	.fstResults
+		opacity: 0
+		visibility: hidden
+		display: block
+		transform: translateY(0)
+		+transition
+	.fstResultItem
+		font-size: 10px
+		color: #191919
+		border: 0
+		border-bottom: 1px solid #dde3ef
+		&:last-child
+			border: 0
+		+transition
+		&.fstFocused,
+		&:hover
+			color: $light-brown
+			background-color: #fff
+		&.fstSelected
+			background-color: #eee
+			color: $light-brown
+		+desktop
+			font-size: 13px
+			height: 40px
+			line-height: 40px
+			padding: 0 0 0 15px
+
+
+.daterangepicker
+	width: 270px
+	border-radius: 0
+	font-family: $body-family
+	.today
+		color: $color-main
+		border-radius: 0
+	.calendar-table
+		td
+			border-radius: 0
+	td
+		&.available
+			&:hover
+				background-color: lighten($color-main, 30%)
+		&.active
+			background-color: $color-main
+			&:hover
+				background-color: lighten($color-main, 10%)
+		&.start-date.end-date
+			border-radius: 0
+
+.range-slider
+	margin-bottom: 10px
+	.range-slider__inputs
+		// display: flex
+		// flex-wrap: wrap
+		// justify-content: space-between
+		// +desktop
+		// 	flex-wrap: nowrap
+		// 	align-items: center
+		.label
+			width: 100%
+			font-weight: 600
+			font-size: 10px
+			margin-bottom: -10px
+			+desktop
+				font-size: 13px
+				width: auto
+				margin-right: 20px
+				margin-top: 9px
+		.input-styled
+			input
+				text-align: center
+		.range
+			width: 100%
+			transform: translateY(-15px)
+			margin-bottom: -35px
+			+desktop
+				transform: translateY(-8px)
+			.irs-line
+				height: 6px
+				background-color: #bdbdbd
+			.irs-bar
+				height: 6px
+				background-color: $color-main
+			.irs-handle
+				width: 28px
+				height: 28px
+				top: 15px
+				cursor: pointer
+				>i
+					&:first-child
+						width: 28px
+						height: 28px
+						left: 0
+						top: 0
+						border-radius: 50%
+						background-color: #726a55
+						z-index: 1
+						margin: 0
+					&:nth-child(2)
+						position: absolute
+						left: 50%
+						top: 50%
+						width: 18px
+						height: 18px
+						transform: translate(-50%, -50%)
+						background-color: #a2977b
+						z-index: 2
+						border-radius: 50%
+			.irs-from,
+			.irs-to
+				opacity: 0
+				+desktop
+					opacity: 1
+					background-color: transparent
+					color: $body-color
+					font-family: $body-family
+					top: -2px
+					&:before
+						display: none
+.radios_block
+	display: flex
+	height: 32px
+	align-items: stretch
+	justify-content: flex-start
+	font-size: 10px
+	+desktop
+		font-size: 13px
+		height: 40px
+	.radio
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		padding: 0 15px
+		width: 100%
+		margin: 0
+		border: 1px solid #beaf87
+		& + .radio
+			border-left: 0
+		input
+			position: absolute
+			z-index: -1
+			opacity: 0
+		&.checked
+			background-color: #726a55
+			border-color: #726a55
+			color: #fff
+
+.checkbox
+	display: inline-block
+	position: relative
+	padding-left: 25px
+	cursor: pointer
+	color: $text-color
+	font-size: 14px
+	font-weight: 400
+	line-height: 22px
+	letter-spacing: 0.34px
+	text-align: left
+	margin-bottom: 12px
+	+desktop
+		padding-left: 30px
+		margin-right: 8px
+	a
+		text-decoration: underline
+	input
+		position: absolute
+		z-index: -1
+		opacity: 0
+		// &:focus
+		//	& ~ .control__indicator
+		//		background: $accent
+		&:checked
+			& ~ .control__indicator
+				background: #fff
+				&:after
+					opacity: 1
+	.control__indicator
+		position: absolute
+		top: 3px
+		left: 0
+		height: 18px
+		width: 18px
+		background: #fff
+		border: 1px solid #d0d0d0
+		transition: .15s
+		&:after
+			content: ''
+			position: absolute
+			opacity: 0
+			left: 6px
+			top: 2px
+			width: 5px
+			height: 10px
+			border: solid #726a54
+			border-width: 0 2px 2px 0
+			transform: rotate(45deg)
+			transition: .15s
+	&:hover
+	 .control__indicator
+		 border-color: #888
+	&_block
+		display: block
+		padding-left: 40px
+		font-size: 16px
+		margin-bottom: 20px
+		.control__indicator
+			width: 28px
+			height: 28px
+			top: -2px
+			&:after
+				top: 3px
+				left: 9px
+				width: 8px
+				height: 17px
+
+.label
+	font-size: 10px
+	+tablet
+		font-size: 13px

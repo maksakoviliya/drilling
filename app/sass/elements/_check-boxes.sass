@@ -1,0 +1,42 @@
+.checkbox
+	display: inline-block
+	position: relative
+	padding-left: 20px
+	cursor: pointer
+	color: #7a8491
+	font-size: 12px
+	font-weight: 400
+	line-height: 1.42
+	text-align: left
+	margin-bottom: 10px
+	a
+		color: $color-main
+		&:hover
+			color: $text-hover
+	input
+		position: absolute
+		z-index: -1
+		opacity: 0
+		// &:focus
+		//	& ~ .control__indicator
+		//		background: $accent
+		&:checked
+			& ~ .control__indicator
+				background-image: url('../img/check-mark.svg')
+				border-color: transparent
+	.control__indicator
+		position: absolute
+		top: 3px
+		left: 0
+		height: 12px
+		width: 13px
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
+		border: 1px solid #d0d0d0
+		border-radius: 50%
+		transition: .15s
+	&:hover
+	 .control__indicator
+		 border-color: #888
+

@@ -1,0 +1,44 @@
+.variants-blocks
+	.variants-block
+		box-shadow: 0 0 6px 0 rgba(114, 106, 85, 0.6)
+		background-color: #726a55
+		color: #fff
+		padding: 15px
+		margin-bottom: -10px
+		cursor: pointer
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		&:hover
+			background-color: #beaf87
+			color: #424242
+			.variants-block__image
+				svg
+					fill: #424242
+		+tablet
+			justify-content: center
+			margin-bottom: 0
+			flex-direction: column
+			height: 135px
+		+desktop
+			text-align: right
+	.variants-block__image
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-right: 10px
+		+tablet
+			margin-right: 0
+			margin-bottom: 10px
+		svg
+			fill: #fff
+	.variants-block__text
+		font-family: $family-condensed
+		font-size: 16px
+		text-transform: uppercase
+		text-align: center
+		line-height: 1.2
+		+tablet
+			font-size: 21px
+		+desktop
+			font-size: 24px

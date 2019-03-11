@@ -1,0 +1,189 @@
+.header
+  box-shadow: 0 2px 14px -4px rgba(0, 0, 0, 0.3)
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  background-color: #fff
+  z-index: 9
+  &.scrolled
+    .header__inner
+      height: $header-height_mobile_scrolled
+      +tablet
+        height: $header-height_tablet_scrolled
+  .header__inner
+    background-color: #fff
+    display: flex
+    height: $header-height_mobile
+    padding: 0 15px
+    justify-content: space-between
+    align-items: center
+    position: relative
+    z-index: 2
+    +transition
+    +tablet
+      height: $header-height_tablet
+      padding: 0
+    +desktop-only
+      > *
+        &:not(:last-child)
+          margin-right: 10px
+  .header__menu
+    position: absolute
+    left: auto
+    right: 0
+    width: 100%
+    top: calc(100% + 8px)
+    max-width: 260px
+    background-color: #fff
+    z-index: 1
+    transform: translateY(-110%)
+    padding: 15px
+    opacity: 0
+    visibility: hidden
+    box-shadow: 0 2px 14px -4px rgba(0, 0, 0, 0.3)
+    +transition
+    ul
+      border-bottom: 1px solid #7a8491
+      margin-bottom: 15px
+      padding-bottom: 8px
+      li
+        a
+          color: $text
+          display: block
+          padding: 8px 0
+          &:hover
+              color: $text-hover
+    +desktop
+      display: none !important
+    &:before
+      content: ''
+      position: absolute
+      top: auto
+      bottom: 100%
+      left: auto
+      right: 10px
+      width: 14px
+      height: 14px
+      border: 7px solid transparent
+      border-bottom-color: #fff
+    &.is-active
+      transform: translateY(0)
+      opacity: 1
+      visibility: visible
+  &.header_new
+    .header__inner
+      > div
+        +mobile
+          margin-right: 12px
+    .logo
+      max-width: 95px
+      +tablet
+        max-width: 150px
+    .header__address
+      +desktop-only
+        display: block
+
+.header__call
+  width: 20px
+  height: 20px
+  svg
+    width: 100%
+    height: auto
+    fill: #7a8491
+    +transition
+  &:hover
+    svg
+      fill: $color-main
+
+.header__socials
+  text-align: right
+  display: flex
+  a
+    display: inline-flex
+    align-items: center
+    font-size: 10px
+    // line-height: 2.1
+    letter-spacing: 0.2px
+    color: $text
+    margin-left: 12px
+    .icon
+      height: auto
+      width: auto
+      margin-left: 5px
+    &:hover
+      color: $text-hover
+
+
+.logo
+  max-width: 130px
+  +tablet
+    max-width: 150px
+
+.header__nav
+  ul
+    display: flex
+    width: 100%
+    justify-content: space-between
+    li
+      margin-right: 20px
+      a
+        color: $text
+        +desktop-only
+          white-space: nowrap
+        &:hover
+            color: $text-hover
+
+.header__address
+  color: #7a8491
+  font-size: 14px
+  line-height: 1.5
+  letter-spacing: 0.2px
+  position: relative
+  +desktop-only
+    white-space: nowrap
+    display: none
+  &:before
+    content: url('../img/address.svg')
+    position: absolute
+    left: auto
+    right: calc(100% + 9px)
+    top: 0
+    width: 11px
+
+.header__contacts
+  +tablet
+    text-align: right
+.phone
+  display: block
+  font-weight: 600
+  font-size: 13px
+  letter-spacing: -0.1px
+  color: $text
+  +desktop-only
+    white-space: nowrap
+  &:hover
+    color: $text-hover
+  +tablet
+    font-size: 16px
+    letter-spacing: -0.24px
+.mail
+  display: inline-block
+  color: #7a8491
+  font-size: 16px
+  letter-spacing: 0.2px
+  &:hover
+    color: $text-hover
+
+.hamburger
+  outline: none
+  padding-top: 4px
+
+.wrapper
+  margin-top: $header-height_mobile
+  +tablet
+    margin-top: $header-height_tablet
+
+a
+  +transition(color, .15s)
+

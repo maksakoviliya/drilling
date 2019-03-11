@@ -1,0 +1,31 @@
+header.header
+  .container
+    .header__menu#main-menu
+      ul
+        li
+          a(href="#") Стоимость бурения
+        li
+          a(href="#") Геологи
+      a(href="#").button.is-fullwidth Заказать звонок
+    .header__inner
+      .logo
+        a(href="#")
+          img(src="./img/logo.svg", alt="")
+      .header__nav.is-hidden-touch
+        ul
+          li
+            a(href="#") Стоимость бурения
+          li
+            a(href="#") Геологи
+      .header__address.is-hidden-mobile
+        p
+          | г. Москва,
+          br
+          | ул. Автозаводская, д. 14
+      .header__contacts
+        a(href="tel:+79999999999").phone +7 (499) 490-44-67
+        a(href="mailto:info@vodalab.ru").mail.is-hidden-mobile info@vodalab.ru
+      button.hamburger.is-hidden-desktop.hamburger--elastic(type='button', data-target='main-menu')
+        span.hamburger-box
+          span.hamburger-inner
+      a(href="success.html").button.is-hidden-touch Заказать звонок

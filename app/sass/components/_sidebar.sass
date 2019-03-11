@@ -1,0 +1,367 @@
+.wrapper
+  display: flex
+  min-height: 100vh
+  align-items: stretch
+  flex-direction: column
+.sidebar
+  background-color: $sidebar-bg-color
+  color: #fff
+  +mobile
+    overflow: visible
+  overflow: hidden
+  position: relative
+  height: $sidebar-mobile-height
+  width: 100%
+  z-index: 20
+  +tablet
+    min-width: $sidebar-width
+    max-width: $sidebar-width
+    position: fixed
+    height: 100vh
+  .sidebar__inner
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    height: 100%
+  .sidebar__burger
+    background-color: $color-main
+    width: 26px
+    height: 26px
+    position: fixed
+    left: 10px
+    top: 17px
+    display: block
+    box-shadow: 0 0 19px 0 rgba(0, 0, 0, 0.38)
+    z-index: 9
+    -webkit-transform: translate3d(0,0,0)
+    span
+      position: absolute
+      display: block
+      left: 50%
+      transform: translateX(-50%)
+      width: 15px
+      height: 2px
+      background-color: $color-second
+      +transition
+      &:first-child
+        top: 8px
+      &:nth-child(2)
+        top: calc(50% - 1px)
+      &:last-child
+        top: auto
+        bottom: 8px
+    +tablet
+      display: none !important
+    &:hover
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.38)
+      span
+        &:first-child
+          top: 7px
+        &:last-child
+          bottom: 7px
+    &.is-active
+      &:hover
+        span
+          &:first-child
+            top: 8px
+          &:last-child
+            bottom: 8px
+      span
+        &:first-child
+          transform: rotate(45deg) translate(-3px, 8px)
+        &:nth-child(2)
+          display: none
+        &:last-child
+          transform: rotate(-45deg) translate(-3px, -9px)
+  .sidebar__logo
+    position: relative
+    // top: $sidebar-mobile-height / 2
+    // transform: translateY(-50%)
+    // right: 11px
+    align-self: flex-end
+    padding: 5px 10px 0 0
+    +tablet
+      top: 0
+      right: 0
+      left: 0
+      transform: translateY(0)
+      position: relative
+      padding: 45px 20px 25px 30px
+    .slim-logo-img
+      display: block
+      & + img
+        display: none
+        +tablet
+          display: block
+      +tablet
+        display: none
+  .sidebar__user
+    display: none
+    text-align: center
+    +tablet
+      display: block
+    .user__avatar
+      display: block
+      margin: 0 auto 16px
+      width: 68px
+      height: 68px
+    .user__name
+      display: block
+      padding: 0 35px
+      color: #fff
+      font-family: $family-condensed
+      text-transform: uppercase
+      letter-spacing: 0.64px
+      line-height: 1.2
+      margin: 0 0 32px
+    .user__exit
+      display: none
+  .sidebar__menu-wrap
+    display: none
+    margin-bottom: 45px
+    position: relative
+    height: 100%
+    width: 100%
+    overflow-y: hidden
+    +tablet
+      display: block
+  .sidebar__menu
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    overflow: visible
+    // width: calc(100% + 34px)
+    // overflow-y: scroll
+    // margin-bottom: 46px
+    ul
+      li
+        a
+          display: flex
+          align-items: center
+          line-height: 40px
+          white-space: nowrap
+          overflow: hidden
+          position: relative
+          padding-left: 69px
+          font-family: $family-condensed
+          text-transform: uppercase
+          color: #fff
+          &.with-submenu
+            &:after
+              content: ''
+              position: absolute
+              right: 40px
+              width: 8px
+              height: 14px
+              border-top: 7px solid $color-main
+              border-bottom: 7px solid transparent
+              border-left: 4px solid transparent
+              border-right: 4px solid transparent  
+              top: 50%
+              transform: translateY(-3px)
+          &:hover,
+          &.is-active
+            background-color: $color-main
+            color: $color-second
+            &.with-submenu
+              &:after
+                border-top-color: $color-second
+              &.is-active
+                &:after
+                  transform: translateY(-10px) rotate(180deg)
+            .icon
+              .icon-color
+                fill: $color-second
+          .icon
+            position: absolute
+            left: 42px
+            transform: translateX(-50%)
+            .icon-color
+              fill: $color-main
+        &.active
+          a
+            background-color: #575656
+            color: $color-main
+            .icon
+              .icon-color
+                fill: $color-main
+        .submenu
+          display: none
+          li
+            a
+              display: flex
+              align-items: center
+              padding-left: 42px
+              min-height: 32px
+              line-height: 1.1
+              white-space: initial
+              padding-right: 50px
+  .sidebar__toggle
+    position: absolute
+    left: 0
+    bottom: 0
+    top: auto
+    width: 100%
+    text-align: center
+    a
+      padding: 8px 0
+      display: flex
+      align-items: center
+      justify-content: center
+      &:hover
+        background-color: #575656
+  &.sidebar_slim
+    overflow: visible
+    +tablet
+      min-width: $sidebar-slim-width
+      max-width: $sidebar-slim-width
+    & + .main
+      +tablet
+        margin-left: $sidebar-slim-width
+    .sidebar__logo
+      +tablet
+        padding: 10px 0 25px
+        align-self: center
+      .slim-logo-img
+        display: block
+        & + img
+          display: none
+    .sidebar__user
+      .user__avatar
+        width: 40px
+        height: 40px
+      .user__name
+        display: none
+    .sidebar__menu-wrap
+      margin-bottom: 45px
+      position: relative
+      height: 100%
+      width: 336px
+      overflow-y: hidden
+      transform: translateX(56px)
+      transform-origin: left
+    .sidebar__menu
+      position: absolute
+      left: 75px
+      top: 0
+      width: auto
+      transform: translateX(0)
+      overflow: visible
+      ul
+        li
+          position: relative
+          &:hover
+            a
+              background-color: #575656
+            & > ul
+              display: block !important
+          &:last-child
+            & > ul
+              top: auto
+              bottom: 0
+          a
+            width: $sidebar-slim-width
+            height: 55px
+            padding-left: 0
+            margin-bottom: 1px
+            .icon
+              left: 50%
+              // Я бы этого не делал
+              // width: 30px
+              // height: 30px
+              // svg
+              //   width: 30px
+              //   height: 30px
+            .text
+              display: none
+            &.with-submenu
+              &:after
+                transform: rotate(-90deg)
+                right: 5px
+                top: 20px
+            &:hover,
+            &.is-active
+              background-color: #575656
+              &.with-submenu
+                &:after
+                  border-top-color: $color-main
+                &.is-active
+                  &:after
+                    transform: rotate(-90deg)
+              .icon
+                .icon-color
+                  fill: $color-main
+          .submenu
+            display: none
+            position: absolute
+            left: 100%
+            top: 0
+            background-color: #575656
+            width: 180px
+            li
+              a
+                width: 100%
+                &:hover
+                  color: $color-main
+    .sidebar__toggle
+      img
+        transform: rotate(180deg)
+  &.sidebar_menu
+    overflow: visible
+    position: fixed
+    top: 0
+    left: 0
+    min-height: 100vh
+    height: 100%
+    & + .main
+      margin-top: $sidebar-mobile-height
+    &.iphone
+      position: absolute
+      // height: 100%
+      min-height: 100%
+      z-index: 3
+      .sidebar__menu-wrap
+        overflow: visible
+        height: 100%
+        .sidebar__menu
+          background-color: $color-second
+          overflow-y: visible
+          position: relative
+    .sidebar__user
+      position: relative
+      display: block
+      background-color: $color-second
+      width: 100%
+      padding-top: 15px
+      .user__avatar
+        margin-left: 10px
+      .user__name
+        text-align: left
+        padding: 0 10px
+        margin-bottom: 15px
+      .user__exit
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 26px
+        height: 26px
+        position: absolute
+        border: 1px solid $color-main
+        top: 15px
+        right: 10px
+    .sidebar__menu-wrap
+      position: relative
+      display: block
+      height: 100%
+      background-color: $color-second
+.main
+  overflow-y: hidden
+  overflow-x: hidden
+  padding: 25px 10px
+  position: relative
+  min-height: 100vh
+  +tablet
+    padding: 40px 25px
+    margin-left: $sidebar-width

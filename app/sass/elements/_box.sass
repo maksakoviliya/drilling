@@ -1,0 +1,17 @@
+.box
+	.box__row
+		display: flex
+		align-items: center
+		&:not(:last-child)
+			margin-bottom: 10px
+		> span
+			width: 50%
+			font-size: 12px
+			+tablet
+				font-size: 14px
+		.box__label
+			color: #726a55
+
+.is-offset-0-widescreen
+	+widescreen
+		margin-left: 0 !important

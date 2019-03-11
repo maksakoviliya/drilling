@@ -1,0 +1,31 @@
+// font-family
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
+  @font-face
+    font-family: $font-family
+    font-weight: $weight
+    font-style: $style
+
+    @if $asset-pipeline == true 
+      src: font-url('#{$file-path}.eot')
+      src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype')
+    @else
+      src: url('#{$file-path}.eot')
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype')
+
+// transition
+@mixin transition($option: all, $speed: .15s, $easing: ease-in-out, $delay: 0s)
+  transition: $option $speed $easing $delay
+
+// Scrollbars
+@mixin scrollbars($size, $foreground-color, $background-color: lighten($foreground-color, 20%))
+  ::-webkit-scrollbar
+      width:  $size
+      height: $size
+  ::-webkit-scrollbar-thumb
+      background: $foreground-color
+  ::-webkit-scrollbar-track
+      background: $background-color
+  // For Internet Explorer
+  body
+    scrollbar-face-color: $foreground-color
+    scrollbar-track-color: $background-color

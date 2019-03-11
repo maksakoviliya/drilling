@@ -1,0 +1,32 @@
+.equipment
+  .equipment__title
+    | Варианты оборудования:
+  .equipments
+    .radios
+      label.radio.checked
+        span.radio__title Runxin
+        span Производство: Китай 
+        span Управление: автоматика
+        input(type='radio', name='gender')
+      label.radio
+        span.radio__title Runxin
+        span Производство: Китай 
+        span Управление: автоматика
+        input(type='radio', name='gender')
+      label.radio
+        span.radio__title Runxin
+        span Производство: Китай 
+        span Управление: автоматика
+        input(type='radio', name='gender')
+  hr
+  p 
+    | Добавить JS
+    br
+    | $('input[type=radio]').on('change', function() {
+    br
+    |    $(this).closest('.radio-buttons').find('.radio').removeClass('checked');
+    br
+    |    $(this).closest('.radio').addClass('checked');
+    br
+    |  })
+    
