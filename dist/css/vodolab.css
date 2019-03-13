@@ -1,0 +1,56 @@
+.radios {
+	display: flex;
+}
+
+@media screen and (max-width: 767px) {
+	.radios {
+		flex-direction: column;
+	}
+}
+
+.radio {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	padding: 15px 15px 5px;
+	border: solid 1px #cdcfdc;
+	border-radius: 4px;
+	background-color: #f8f8f8;
+	text-align: left;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.radio:not(:last-child) {
+	margin-right: 30px;
+}
+
+@media screen and (max-width: 767px) {
+	.radio {
+		margin-right: 0;
+		margin-bottom: 15px;
+		align-items: center;
+	}
+}
+
+.radio span {
+	margin-bottom: 10px;
+}
+
+.radio span.radio__title {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.radio input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.radio.checked {
+	background-color: #fff;
+	border-color: #003bdd;
+}
